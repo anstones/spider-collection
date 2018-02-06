@@ -1,0 +1,5 @@
+Slave端：
+scrapy runspider juzi.py
+
+Master端：
+redis-cli > lpush itjuzispider:start_urls http://www.itjuzi.com/company
