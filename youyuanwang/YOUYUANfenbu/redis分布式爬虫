@@ -1,0 +1,9 @@
+6. 在Master端启动redis-server：
+redis-server
+
+7. 在Slave端分别启动爬虫，不分先后：
+scrapy runspider youyuan.py
+
+8. 在Master端的redis-cli里push一个start_urls
+redis-cli> lpush youyuan:start_urls http://www.youyuan.com/find/beijing/mm18-25/advance-0-0-0-0-0-0-0/p1/
+9. 爬虫启动，查看redis数据库数据。
